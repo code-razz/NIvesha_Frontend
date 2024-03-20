@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
     e.preventDefault();
     try {
         // Send POST request to server
-        const res = await axios.post("https://nivesha-frontend.vercel.app/api/company",{...formData,userId:user._id});
+        const res = await axios.post("https://nivesha-backend.onrender.com/api/company",{...formData,userId:user._id});
         console.log(res.data); // You can handle success response here
         navigate("/");
     } catch (error) {

@@ -15,7 +15,7 @@ function FProfile() {
   const data=location.state.item
 
   const {user}=useContext(AuthContext);
-  const {data:investorData,loading,error}=useFetch(`https://nivesha-frontend.vercel.app/api/investor/uinvest/${user._id}`);
+  const {data:investorData,loading,error}=useFetch(`https://nivesha-backend.onrender.com/api/investor/uinvest/${user._id}`);
 
 
   if(loading){

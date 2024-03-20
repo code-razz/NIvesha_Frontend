@@ -18,7 +18,7 @@ function Feed(){
         navigate('/fprofile',{state:{item}});
     };
 
-    const {data,loading,error}=useFetch("https://nivesha-frontend.vercel.app/api/company");
+    const {data,loading,error}=useFetch("https://nivesha-backend.onrender.com/api/company");
 
     return(
         <>

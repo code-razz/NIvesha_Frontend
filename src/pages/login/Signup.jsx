@@ -62,7 +62,7 @@ function Signup() {
     const handleLogin=async()=>{
         dispatch({type:"LOGIN_START"})
         try{
-            const res=await axios.post("https://nivesha-frontend.vercel.app/api/auth/login", {username:formData.username,password:formData.password});
+            const res=await axios.post("https://nivesha-backend.onrender.com/api/auth/login", {username:formData.username,password:formData.password});
             dispatch({type:"LOGIN_SUCCESS",payload:res.data})   // res.data::Because when the login is success, our api (i.e. backend) return all the user info
     
             navigate("/");
@@ -86,7 +86,7 @@ function Signup() {
 
         try {
             // Send POST request to server
-            const res = await axios.post("https://nivesha-frontend.vercel.app/api/auth/register", {
+            const res = await axios.post("https://nivesha-backend.onrender.com/api/auth/register", {
                 ...formData,
                 photo: imageUrl // Include the uploaded image URL in the form data
             });
