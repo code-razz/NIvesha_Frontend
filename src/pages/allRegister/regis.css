@@ -1,0 +1,48 @@
+.rcontainer{
+  background: url(../../images/back.jpg);
+  background-repeat: repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rh1{
+
+}
+
+.regbody{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  
+}
+
+.rtable
+{
+  display: flex;
+  /* background: gray; */
+  background-color: rgba(96, 47, 47, 0.23);
+  margin: 40px;
+
+}
+
+.rright input{
+  margin: 7px;
+  border-radius: 3px;
+}
+
+.rright
+{
+  margin: 30px;
+}
+.rright textarea
+{
+  height: 200px;
+  width: 400px;
+}
