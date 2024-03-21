@@ -12,9 +12,9 @@ function Signup() {
         username: '',
         email: '',
         password: '',
-        isAdmin:'false',
-        isInvestor:'false',
-        isCompany:'false'
+        isAdmin:undefined,
+        isInvestor:undefined,
+        isCompany:undefined
     });
     const [errors,setErrors]=useState(undefined);
     const navigate=useNavigate();
