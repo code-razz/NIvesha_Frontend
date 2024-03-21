@@ -78,8 +78,19 @@ function Header(){
                                                             </>:<></>}
                                         <li >
                                             <Link className='flex' to="/profile" style={{textDecoration:"none", color:"black"}}>
-                                            <img
-                                                src={user.photo} className='rounded-circle'/>
+                                                {user.photo? (
+                                                        <img
+                                                        src={user.photo}
+                                                        alt="Admin"
+                                                        className="rounded-circle"
+                                                        width={150}/>
+                                                    ):(
+                                                        <img
+                                                        src={nullProfile}
+                                                        alt="Admin"
+                                                        className="rounded-circle"
+                                                        width={150}/>
+                                                )}
                                                 <button style={{height:40,padding:5}}>{user.username}</button>
                                             </Link>
                                         </li>
