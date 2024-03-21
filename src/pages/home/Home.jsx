@@ -3,6 +3,7 @@ import Header from '../../components/Header.jsx';
 import Mid from '../../components/Mid.jsx';
 import Footer from '../../components/Footer.jsx';
 import 'https://kit.fontawesome.com/cfdb111d3e.js';
+import useFetch from '../../hooks/useFetch.js';
 
 function Home(){
 
