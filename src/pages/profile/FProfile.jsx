@@ -45,7 +45,7 @@ function FProfile() {
     // console.log(formData);
       try{
           // Send POST request to server
-          const res = await axios.post("http://localhost:8000/api/pullreq",{...formData,investorName:investorData.name,investorId:investorData._id});
+          const res = await axios.post("https://nivesha-backend.onrender.com/api/pullreq",{...formData,investorName:investorData.name,investorId:investorData._id});
           console.log(res.data); // You can handle success response here
           alert("pull request sent to the company");
       }catch (error) {
