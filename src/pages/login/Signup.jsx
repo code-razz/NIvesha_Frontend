@@ -150,14 +150,14 @@ function Signup() {
                         />
                     <label htmlFor="investor">Investor</label>
 
-                    <input 
+                    {/* <input 
                         type="radio" 
                         id="admin" 
                         name="userType" 
                         value="admin" // Assign true if the user selects "Admin"
                         onChange={handleChange}
                         />
-                    <label htmlFor="admin">Admin</label>
+                    <label htmlFor="admin">Admin</label> */}
 
                 </div>
 
