@@ -24,12 +24,12 @@ function Mid(){
 
                 <Link to="/investorp" style={{textDecoration:"none",color:"white"}}>
                                 <button className="inbtn">Investor </button>
-                            </Link>
-                            <Link to="/companyp" style={{textDecoration:"none",color:"white"}}>
-                                <button className="inbtn">Company </button>
-                            </Link>
+                </Link>
+                <Link to="/companyp" style={{textDecoration:"none",color:"white"}}>
+                    <button className="inbtn">Company </button>
+                </Link>
 
-                {user?((user.isInvestor)? (
+                {/* {user?((user.isInvestor)? (
                                             <Link to="/investorreg" style={{textDecoration:"none",color:"white"}}>
                                                 <button className="inbtn">Register </button>
                                             </Link>
@@ -37,7 +37,7 @@ function Mid(){
                                             <Link to="/companyreg" style={{textDecoration:"none",color:"white"}}>
                                                 <button className="inbtn">Register </button>
                                             </Link>
-                                        )):(<></>)}
+                                        )):(<></>)} */}
 
                 {/* {user? ((user.isInvestor)? (
                                             <Link to="/investorreg" style={{textDecoration:"none",color:"white"}}>
