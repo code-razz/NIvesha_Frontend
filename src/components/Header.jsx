@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { useContext } from 'react';
 import useFetch from '../hooks/useFetch';
+import nullProfile from '../images/nullProfile.jpeg'
 
 function Header(){
     const {user}=useContext(AuthContext);
