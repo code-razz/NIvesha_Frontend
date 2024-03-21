@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router';
 
 function CompanyReg(){
     const {user}=useContext(AuthContext);
+    const [errors,setErrors]=useState(undefined);
     
     const reload=()=>{
       window.location.reload(); // Reload the current page
@@ -55,7 +56,8 @@ const handleSubmit = async (e) => {
         console.log(res.data); // You can handle success response here
         navigate("/");
     } catch (error) {
-        console.error(error); // You can handle error response here
+        setErrors(error.response.data);
+        console.log(error.response.data);
     }
 };
     
@@ -81,7 +83,7 @@ const handleSubmit = async (e) => {
               </td>
             </tr>
             <tr>
-              <td>Category</td>
+              <td>Type</td>
               <td>
                 <input type="text" name="type" value={formData.type} onChange={handleChange}/>
               </td>
@@ -123,13 +125,13 @@ const handleSubmit = async (e) => {
               </td>
             </tr>
             <tr>
-              <td>Phone NO</td>
+              <td>Phone No</td>
               <td>
                 <input type="tel" name="phone" value={formData.phone} onChange={handleChange}/>
               </td>
             </tr>
             <tr>
-              <td>email</td>
+              <td>Email</td>
               <td>
                 <input type="email" name="email" value={formData.email} onChange={handleChange}/>
               </td>
@@ -176,6 +178,7 @@ const handleSubmit = async (e) => {
         <input type="checkbox" />
         <p>I understand and agree with terms and condition</p>
       </div>
+      {errors && <span>{errors.message}</span>}
       <div className="btns">
         <button
           className="submit" onClick={handleSubmit}

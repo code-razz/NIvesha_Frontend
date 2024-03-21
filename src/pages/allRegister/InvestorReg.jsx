@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router';
 // import './Regis.js';
 
 function InvestorReg(){
+  const [errors,setErrors]=useState(undefined);
   const {user}=useContext(AuthContext);
 
   const reload=()=>{
@@ -54,7 +55,8 @@ const handleSubmit = async (e) => {
         console.log(res.data); // You can handle success response here
         navigate("/");
     } catch (error) {
-        console.error(error); // You can handle error response here
+      setErrors(error.response.data);
+      console.log(error.response.data);
     }
 };
     return(
@@ -155,6 +157,7 @@ const handleSubmit = async (e) => {
             <input type="checkbox" />
             <p style={{ marginTop:"15px" }}>I understand and agree with terms and condition</p>
           </div>
+          {errors && <span style={{color:'red'}}>{errors.message}</span>}
           <div className="field btns">
             {/* <button class="prev-3 prev">Previous</button> */}
             <button

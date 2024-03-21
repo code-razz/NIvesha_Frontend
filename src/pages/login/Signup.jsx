@@ -16,6 +16,7 @@ function Signup() {
         isInvestor:'false',
         isCompany:'false'
     });
+    const [errors,setErrors]=useState(undefined);
     const navigate=useNavigate();
     const {loading, error,dispatch}=useContext(AuthContext);
 
@@ -79,7 +80,11 @@ function Signup() {
 
         // Validate password match
         if (formData.password !== formData.confirmPassword) {
-            alert("Passwords do not match!");
+            setErrors({message:"Password and confirm password don't match"});
+            return;
+        }
+        if(!formData.isAdmin && !formData.isCompany && !formData.isInvestor){
+            setErrors({message:"Select any role please"});
             return;
         }
 
@@ -96,7 +101,9 @@ function Signup() {
 
             navigate("/");
         } catch (error) {
-            console.error(error); // You can handle error response here
+            setErrors(error.response.data);
+            console.log(error.response.data);
+
         }
     };
 
@@ -121,7 +128,7 @@ function Signup() {
                     <ImageUploadComponent onImageUploaded={handleImageUploaded} />
                 </div>
                 <div className='formPart'>
-                <label htmlFor="username">Name</label>
+                <label htmlFor="username">Username</label>
                 <input type="text" name="username" value={formData.username} onChange={handleChange} placeholder="Full Name" />
                 <label htmlFor="email">Email</label>
                 <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder="Email Id" />
@@ -162,6 +169,7 @@ function Signup() {
                 </div>
 
                 <button type="submit">Sign Up</button>
+                {errors && <span>{errors.message}</span>}
                 <div className="social">
                     <div className="go">
                         <i className="fab fa-google" /> Google
