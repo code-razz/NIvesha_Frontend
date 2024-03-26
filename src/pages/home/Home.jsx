@@ -8,7 +8,10 @@ import useFetch from '../../hooks/useFetch.js';
 function Home(){
 
     const {data,loading,error}=useFetch("https://nivesha-backend.onrender.com/api/company");
-    if(data){
+    if (data === undefined || data === null || data.length === 0) {
+        console.log("Connecting to the backend");
+    }else{
+        // console.log(data);
         console.log("Backend Connected Successfully");
     }
 
