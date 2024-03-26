@@ -11,9 +11,10 @@ function Home(){
     if (data === undefined || data === null || data.length === 0) {
         console.log("Connecting to the backend");
     }else{
-        // console.log(data);
+        console.log("inside",data);
         console.log("Backend Connected Successfully");
     }
+    console.log("outside",data);
 
     return(
         <>
