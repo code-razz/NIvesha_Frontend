@@ -57,15 +57,18 @@ function FProfile() {
   });
 
   const handleClick = async (e) => {
-      e.preventDefault();
-      var templateParams = {
-        //from_name: 'James',
-        to_name:data.name,
-        to_email:data.email,
-        invest_name:investorData.name
-        // message: 'Check this out!',
-        //reply_to:"rajsah5557@gmail.com"
-      };
+    e.preventDefault();
+    var templateParams = {
+      //from_name: 'James',
+      to_name:data.name,
+      to_email:data.email,
+      invest_name:investorData.name,
+      invest_grade:investorData.grade,
+      invest_address:investorData.address
+
+      // message: 'Check this out!',
+      //reply_to:"rajsah5557@gmail.com"
+    };
       
       emailjs.send('darkService', 'template_nqbtivs', templateParams).then(
         (response) => {
