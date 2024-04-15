@@ -5,7 +5,6 @@ import { AuthContext } from '../context/AuthContext';
 import { useContext } from 'react';
 import useFetch from '../hooks/useFetch';
 import nullProfile from '../images/nullProfile.jpeg'
-
 function Header(){
     const {user}=useContext(AuthContext);
     // console.log(user.isCompany);
@@ -79,19 +78,20 @@ function Header(){
                                                             </>:<></>}
                                         <li >
                                             <Link className='flex' to="/profile" style={{textDecoration:"none", color:"black"}}>
-                                                {user.photo? (
-                                                        <img
-                                                        src={user.photo}
-                                                        alt="Admin"
-                                                        className="rounded-circle"
-                                                        width={150}/>
-                                                    ):(
-                                                        <img
-                                                        src={nullProfile}
-                                                        alt="Admin"
-                                                        className="rounded-circle"
-                                                        width={150}/>
-                                                )}
+                                                
+                                                {user.photo? (<img
+                                                            src={user.photo}
+                                                            alt="Admin"
+                                                            className="prof-pic rounded-circle"
+                                                            width={150}
+                                                            />):(
+                                                                <img
+                                                                src={nullProfile}
+                                                                alt="Admin"
+                                                                className=" prof-pic rounded-circle"
+                                                                width={150}
+                                                                />
+                                                    )}
                                                 <button style={{height:40,padding:5}}>{user.username}</button>
                                             </Link>
                                         </li>

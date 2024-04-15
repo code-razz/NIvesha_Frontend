@@ -9,7 +9,7 @@ function Mid(){
     return(
         <div className="bdy">
             <div className="main">
-            <div className="left">
+            <div className="mleft">
                 <h1>
                 Grow <br />
                 Invest
@@ -24,49 +24,14 @@ function Mid(){
 
                 <Link to="/investorp" style={{textDecoration:"none",color:"white"}}>
                                 <button className="inbtn">Investor </button>
-                </Link>
-                <Link to="/companyp" style={{textDecoration:"none",color:"white"}}>
-                    <button className="inbtn">Company </button>
-                </Link>
-
-                {/* {user?((user.isInvestor)? (
-                                            <Link to="/investorreg" style={{textDecoration:"none",color:"white"}}>
-                                                <button className="inbtn">Register </button>
-                                            </Link>
-                                        ):(
-                                            <Link to="/companyreg" style={{textDecoration:"none",color:"white"}}>
-                                                <button className="inbtn">Register </button>
-                                            </Link>
-                                        )):(<></>)} */}
-
-                {/* {user? ((user.isInvestor)? (
-                                            <Link to="/investorreg" style={{textDecoration:"none",color:"white"}}>
-                                                <button className="inbtn">Investor </button>
-                                            </Link>
-                                        ):(
-                                            <Link to="/companyreg" style={{textDecoration:"none",color:"white"}}>
-                                                <button className="inbtn">Company </button>
-                                            </Link>
-                                        )
-                        ):(
-                            <>
-                            <Link to="/" style={{textDecoration:"none",color:"white"}}>
-                                <button className="inbtn">Investor </button>
                             </Link>
-                            <Link to="/" style={{textDecoration:"none",color:"white"}}>
+                            <Link to="/companyp" style={{textDecoration:"none",color:"white"}}>
                                 <button className="inbtn">Company </button>
                             </Link>
-                            </>
-                        )
-                } */}
-                {/* <Link to="/investorreg" style={{textDecoration:"none",color:"white"}}>
-                <   button className="inbtn">Investor </button>
-                </Link>
-                <Link to="/companyreg" style={{textDecoration:"none",color:"white"}}>
-                <   button className="inbtn">Company </button>
-                </Link> */}
-                
                 </h1>
+            </div>
+            <div className="mright">
+
             </div>
             {/* <div class="right">
                     <img src="a1.jpg" alt="background"
@@ -75,6 +40,7 @@ function Mid(){
                 </div> */}
             </div>
             <div className="aftermain">
+                
             <h1 style={{ textAlign: "center", fontSize: 50 }}>What we offer?</h1>
             {/* <p style="font-size:30px;margin-left:20px;text-align: center;">We are the platform that connect companies with investor <br>to facilitates investment oppuertunities of their choice.<br>Through this enterpreneurs can reach out to multiple investor at a time and pitch their ideas.</p> */}
             <div className="side">

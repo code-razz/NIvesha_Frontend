@@ -3,6 +3,7 @@ import './regis.css';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router';
+import ImageUploadComponent from '../../components/ImageUpload';
 // import './Regis.js';
 
 function CompanyReg(){
@@ -18,6 +19,8 @@ function CompanyReg(){
 
       reload();
     }
+
+    const [imageUrl, setImageUrl] = useState('');
     const [formData, setFormData] = useState({
     name: undefined,
     type:undefined,
@@ -36,6 +39,10 @@ function CompanyReg(){
     
 });
 const navigate=useNavigate();
+
+const handleImageUploaded = (url) => {
+  setImageUrl(url); // Store the uploaded image URL in the state
+};
 
 const handleChange = (e) => {
     const { name, value } = e.target;
@@ -140,6 +147,12 @@ const handleSubmit = async (e) => {
         </table>
         <table className="rright">
           <tbody>
+          <tr className='imageUpload'>
+            
+                    
+            <ImageUploadComponent onImageUploaded={handleImageUploaded} />
+        
+    </tr>
             <tr>
               <td colSpan={2}>
                 <div className="field">
@@ -147,30 +160,6 @@ const handleSubmit = async (e) => {
                 </div>
               </td>
             </tr>
-            {/* <tr>
-              <td>Company Logo</td>
-              <td>
-                <input type="file" style={{ border: 0 }} />
-              </td>
-            </tr>
-            <tr>
-              <td>Registration Document</td>
-              <td>
-                <input type="file" style={{ border: 0 }} />
-              </td>
-            </tr>
-            <tr>
-              <td>Financial Report(LFY)</td>
-              <td>
-                <input type="file" style={{ border: 0 }} />
-              </td>
-            </tr>
-            <tr>
-              <td>Pitch(if any)</td>
-              <td>
-                <input type="file" style={{ border: 0 }} />
-              </td>
-            </tr> */}
           </tbody>
         </table>
       </div>

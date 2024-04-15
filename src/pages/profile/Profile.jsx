@@ -89,7 +89,7 @@ function Profile() {
                 {user.photo? (<img
                               src={user.photo}
                               alt="Admin"
-                              className="rounded-circle"
+                              className="rounded-circle prof-pic2"
                               width={150}
                             />):(
                               <img
